@@ -1,0 +1,27 @@
+<launch>
+    <!-- =====================================================
+         启动视觉识别节点
+         ===================================================== -->
+    <node name="vision_node" pkg="target_patrol" type="vision_node.py" output="screen">
+        <!-- 可选：传递根路径参数 -->
+        <param name="root_path" value="$(find target_patrol)/config"/>
+    </node>
+    
+    <!-- =====================================================
+         启动巡逻决策节点
+         ===================================================== -->
+    <node name="patrol_brain" pkg="target_patrol" type="patrol_brain_new.py" output="screen"/>
+    
+    <!-- =====================================================
+         说明：
+         以下节点需要在外部启动：
+         1. Gazebo仿真环境
+         2. TurtleBot3导航栈
+         
+         启动顺序：
+         Terminal 1: roslaunch target_patrol start_world.launch
+         Terminal 2: roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=...
+         Terminal 3: roslaunch target_patrol patrol_task.launch
+         ===================================================== -->
+    
+</launch>

@@ -1,0 +1,28 @@
+# 巡逻坐标点配置
+# 格式：[x, y, w]  (w 是四元数的 w 分量，1.0 表示朝前)
+
+patrol_points:
+  - name: "Room_A"
+    x: -1.6
+    y: 1.6
+    w: 1.0
+    
+  - name: "Room_B"
+    x: 1.6
+    y: 1.6
+    w: 1.0
+    
+  - name: "Room_C"
+    x: -1.6
+    y: -1.6
+    w: 1.0
+    
+  - name: "Room_D"
+    x: 1.6
+    y: -1.6
+    w: 1.0
+    
+  - name: "Home"
+    x: 0.0
+    y: 0.0
+    w: 1.0
