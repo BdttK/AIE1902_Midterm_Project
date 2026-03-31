@@ -21,3 +21,8 @@ Before running the code, ensure you have the following installed:
 * Aliyun DashScope SDK (for Qwen-VL integration):
   ```bash
   pip install dashscope
+
+## How To Start
+Terminal 1: roslaunch target_patrol start_world.launch
+Terminal 2: roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=...
+Terminal 3: roslaunch target_patrol patrol_task.launch
